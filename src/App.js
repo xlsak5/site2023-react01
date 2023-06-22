@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-function App() {
+import Header from "./component/layout/Header.jsx";
+import Home from "./component/pages/Home.jsx";
+import PortPage from "./component/pages/PortPage.jsx";
+import Portfolio from "./component/pages/PortPage.jsx";
+import YoutubePage from "./component/pages/YoutubePage.jsx";
+import UnsplashPage from "./component/pages/UnsplashPage.jsx";
+import MoviePage from "./component/pages/MoviePage.jsx";
+import Footer from "./component/layout/Footer.jsx";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Header attr={["header__wrap", "nexon5", "bg-blue"]} />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/port" element={<PortPage />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/youtube" element={<YoutubePage />} />
+        <Route path="/unsplash" element={<UnsplashPage />} />
+        <Route path="/movie" element={<MoviePage />} />
+      </Routes>
+      <Footer attr={"footer__wrap section gmarket5"} />
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,72 @@
+// unsplash__wrap
+.unsplash__wrap {
+    overflow: hidden;
+}
+.unsplash__inner {
+    height: 570px;
+
+    h3 {
+        font-size: 50px;
+        margin-bottom: 40px;
+    }
+    p {
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 60px;
+    }
+    a {
+        @include border(50px);
+    }
+    .unsplash__item {
+        @include flex-between;
+        margin-top: 70px;
+        position: absolute;
+        
+        > div {
+            width: 400px;
+            margin-right: 20px;
+
+            img {
+                width: 100%;
+                
+                @include border(20px);
+            }
+        }
+    }
+}
+
+
+// unsplash__page
+.unsplash__cont {
+    ul {
+        column-count: 4;
+        column-gap: 20px;
+
+         li {
+            // width: 25%;
+            margin-bottom: 20px;
+         }
+    }
+}
+
+// unsplash__search
+.unsplash__search {
+    margin-bottom: 50px;
+    text-align: center;
+
+    input {
+        border: 1px solid #E8ECF2;
+        font-size: 16px;
+        padding: 10px 20px;
+        @include border(50px);
+        min-width: 300px;
+        margin-right: 10px;
+        font-family: 'NanumBarunGothic';
+    }
+    
+    button {
+        @include button (#F7100D, #fff);
+        @include border (50px);
+        font-family: 'NanumBarunGothic';
+    }
+}
