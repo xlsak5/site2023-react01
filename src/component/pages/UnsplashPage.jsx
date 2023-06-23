@@ -31,14 +31,14 @@ const UnsplashPage = () => {
     )
       .then((response) => response.json())
       .then((result) => setImages(result))
-      .catch((error) => error);
+      .catch((error) => console.log("error", error));
   }, []);
+
   return (
     <Contents>
       <ContTitle title="unsplash" />
-      <UnsplashSlider />
       <UnsplashSearch onSearch={search} />
-      <UnsplashTag />
+      <UnsplashTag onSearch={search} />
       <UnsplashCont images={images} />
     </Contents>
   );

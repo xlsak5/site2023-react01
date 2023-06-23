@@ -1,6 +1,6 @@
 import React from "react";
 
-const UnsplashIag = ({ key, image }) => {
+const UnsplashImg = ({ image }) => {
   return (
     <li>
       <a href={`https://unsplash.com/photos/${image.id}`}>
@@ -15,7 +15,7 @@ const UnsplashCont = ({ images }) => {
     <div className="unsplash__cont container">
       <ul>
         {images.map((image, index) => (
-          <UnsplashIag key={index} image={image} />
+          <UnsplashImg key={index} image={image} />
         ))}
       </ul>
     </div>

@@ -13,7 +13,7 @@ const Home = () => {
     <>
       <Contents>
         <Slider attr="slider__wrap gmarket5" />
-        <Intro attr={"intro__wrap section bg-blue suseong"} />
+        <Intro attr={"intro__wrap section suseong"} />
         <Port attr={"port__wrap section center scoreDream bg-blue"} />
         <Youtube attr={"youtube__wrap section crown"} />
         <Unsplash attr={"unsplash__wrap section scoreDream bg-blue"} />

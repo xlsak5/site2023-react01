@@ -7,17 +7,18 @@ const UnsplashSearch = ({ onSearch }) => {
   const handleSearch = () => {
     const value = inputRef.current.value;
     onSearch(value);
-
-    console.log(inputRef);
   };
+
   const onKeyPress = (event) => {
     if (event.key === "Enter") {
       handleSearch();
     }
   };
+
   const onClick = () => {
     handleSearch();
   };
+
   return (
     <div className="unsplash__search container">
       <h2 className="blind">검색하기</h2>

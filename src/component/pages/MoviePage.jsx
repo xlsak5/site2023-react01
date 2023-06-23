@@ -1,44 +1,36 @@
 import React, { useEffect, useState } from "react";
-
-import Contents from "../layout/Contents.jsx";
-import MovieSlider from "../movie/MovieSlider.jsx";
-import MovieSearch from "../movie/MovieSearch.jsx";
-import MovieTag from "../movie/MovieTag.jsx";
-import MovieCont from "../movie/MovieCont.jsx";
-import ContTitle from "../layout/ContTitle.jsx";
+import Contents from "../layout/Contents";
+import MovieTag from "../movie/MovieTag";
+import MovieSlider from "../movie/MovieSlider";
+import MovieCont from "../movie/MovieCont";
+import ContTitle from "../layout/ContTitle";
 
 const MoviePage = () => {
-  const [movie, setMovie] = useState([]);
+  const [movies, setMovies] = useState([]);
 
-  // async + await : 동기식
   const search = async (query) => {
-    await fetch(
-      `https://api.themoviedb.org/3/search/movie?include_adult=true&query=${query}&api_key=ec3680ba547ae5f7c2f1143ff31a8746`
-    )
+    await fetch(`${query}?api_key=9278d13f704ad0fe53c2263b692efd89`)
       .then((response) => response.json())
-      .then((result) => setMovie(result.results))
-      .catch((error) => error);
+      .then((result) => setMovies(result.results))
+      .catch((error) => console.log(error));
   };
 
   useEffect(() => {
     fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=ec3680ba547ae5f7c2f1143ff31a8746&Limit=18"
+      "https://api.themoviedb.org/3/movie/popular?api_key=9278d13f704ad0fe53c2263b692efd89"
     )
       .then((response) => response.json())
-      .then((result) => setMovie(result.results))
-      .then((error) => error);
+      .then((result) => setMovies(result.results))
+      .catch((error) => console.log("error", error));
   }, []);
 
   return (
-    <>
-      <Contents>
-        <ContTitle title="movie" />
-        <MovieSlider movies={movie} />
-        <MovieSearch onSearch={search} />
-        <MovieTag />
-        <MovieCont movie={movie} />
-      </Contents>
-    </>
+    <Contents>
+      <ContTitle title="movie" />
+      <MovieSlider movies={movies} />
+      <MovieTag onSearch={search} />
+      <MovieCont movies={movies} />
+    </Contents>
   );
 };
 

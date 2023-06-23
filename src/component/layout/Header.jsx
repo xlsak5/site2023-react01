@@ -18,7 +18,7 @@ function Header(props) {
         <nav className="header__nav" role="navigation">
           <ul>
             <li>
-              <Link to="/home">소개</Link>
+              <Link to="/intro">소개</Link>
             </li>
             <li>
               <Link to="/port">포트폴리오</Link>

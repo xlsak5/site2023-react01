@@ -8,7 +8,6 @@ import "swiper/scss/pagination";
 
 SwiperCore.use([Navigation, Pagination, Autoplay]); // Swiper
 
-SwiperCore.use([Navigation, Pagination, Autoplay]); // Swiper
 // import "swiper/css";
 
 const Slider = (props) => {

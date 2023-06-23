@@ -1,11 +1,11 @@
 import React from "react";
 import MovieItem from "./movieItem";
 
-const MovieCont = ({ movie }) => {
+const MovieCont = ({ movies }) => {
   return (
     <div className="movie__cont container">
       <ul>
-        {movie.map((movie, index) => (
+        {movies.map((movie, index) => (
           <MovieItem key={index} movie={movie} />
         ))}
       </ul>
