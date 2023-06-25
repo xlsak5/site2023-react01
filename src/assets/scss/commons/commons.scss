@@ -1,0 +1,153 @@
+// container의 종류
+.container {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    // background-color: rgba(0,0,0,0.4);
+}
+
+// section
+.section.center {
+    text-align: center;
+}
+.section {
+    padding: 120px 0;
+
+    > h3 {
+        font-size: 50px;
+    }
+    > p {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 60px;
+    }
+}
+
+// cont__Title
+.cont__Title > h2 {
+    text-align: center;
+    font-size: 5vw;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 5%;
+}
+
+// cont__title
+.cont__title {
+    h2 {
+        text-align: center;
+        font-size: 5vw;
+        text-transform: uppercase;
+        padding: 5%;
+        font-weight: bold;
+    }
+}
+// 말줄임 효과
+.ellipsis {
+    width: 250px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+
+// background
+.bg-blue {
+    background-color: var(--bg_section);
+}
+
+// button
+.button-blue {
+    @include button(#4857EC, #ffffff);
+}
+.button-red {
+    @include button(#FF3344, #ffffff);
+}
+.button-green {
+    @include button(#00C183, #ffffff);
+}
+
+// icon
+.icon-bg1 {
+    @include icon(#D3F6EA, url("../../images/intro/imgtext01.svg"));
+}
+.icon-bg2 {
+    @include icon(#E1F9D5, url("../../images/intro/imgtext02.svg"));
+}
+.icon-bg3 {
+    @include icon(#F6DCE0, url("../../images/intro/imgtext03.svg"));
+}
+.icon-bg4 {
+    @include icon(#D3D8FA, url("../../images/intro/imgtext04.svg"));
+}
+.icon-bg5 {
+    @include icon(#DAFBEB, url("../../images/intro/imgtext05.svg"));
+}
+.icon-bg6 {
+    @include icon(#00C183, url("../../images/intro/imgtext06.svg"));
+}
+
+// blind
+.blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+// ir 
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+// skip
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+#skip a {
+    background: var(--color_body);
+    color: #fff;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+
+$interval: (
+    0: 0,
+    10: 10px,
+    20: 20px,
+    30: 30px,
+    40: 40px,
+    50: 50px,
+    60: 60px,
+    70: 70px,
+    80: 80px,
+    90: 90px,
+    100: 100px,
+);
+
+@each $value, $size in $interval {
+    .mb#{$value} {
+        margin-bottom: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .mt#{$value} {
+        margin-top: $size !important;
+    }
+}
+
+
