@@ -2,7 +2,8 @@ import React from "react";
 import Contents from "../layout/Contents";
 import ContTitle from "../layout/ContTitle";
 import IntroCont from "../intro/IntroCont";
-import IntroSlider from "../intro/IntroSlider";
+import IntroSkill from "../intro/IntroSkill";
+import IntroOperate from "../intro/IntroOperate";
 
 const IntroPage = () => {
   return (
@@ -10,7 +11,8 @@ const IntroPage = () => {
       <Contents>
         <ContTitle title="Intro" />
         <IntroCont />
-        <IntroSlider />
+        <IntroSkill />
+        <IntroOperate />
       </Contents>
     </>
   );

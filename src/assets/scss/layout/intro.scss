@@ -53,89 +53,106 @@
 }
 
 
-// intro slider
-.intro__slider {
-    .intro__tistory {
-        img {
-            width: 100%;
-            height: 600px;
-            margin-top: 5%;
-        }
-        
-        .tistory__desc {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-weight: bold;
-
-            .first {
-                display: block;
-                font-family: 'NanumSquareNeo';
-                font-size: 52px;
-            }
-            .second {
-                display: block;
-                font-family: 'NanumSquareNeo';
-                font-size: 30px;
-                margin: 2vw 0;
-            }
-            a {
-                display: inline-block;
-                padding: 10px 25px;
-                border-radius: 5px;
-                color: #fff;
-                background-color: #747474;
-                transition: background-color 0.3s;
-                font-size: 20px;
-                font-family: 'NanumSquareNeo';
-
-                &:hover {
-                    background-color: #000;
-                }
-            }
-        }
+// IntroCont
+.me__box {
+    padding: 3% 0 0 0;
+    h1 {
+        text-align: center;
+        font-size: 30px;
+        margin-right: 250px;
+        margin-bottom: 20px;
+        color: #0077ff;
+        font-family: 'NanumSquareNeo';
+        font-weight: bold;
     }
-
-        .intro__githube {            
-            img {
-                width: 100%;
-                height: 600px;
-                margin-top: 5%;
-            }
-            .githube__desc {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                font-size: 1.5vw;
-                font-weight: bold;
-
-                .first {
-                    display: block;
-                    font-family: 'NanumSquareNeo';
-                    font-size: 52px;
-                }
-                .second {
-                    display: block;
-                    font-family: 'NanumSquareNeo';
-                    font-size: 30px;
-                    margin: 2vw 0;
-                }
-                a {
-                    display: inline-block;
-                    padding: 10px 25px;
-                    border-radius: 5px;
-                    color: #fff;
-                    background-color: #747474;
-                    transition: background-color 0.3s;
-                    font-size: 20px;
-                    font-family: 'NanumSquareNeo';
+    .me__introduce {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1280px;
+        margin: 0 auto;
+        padding-bottom: 5%;
     
-                    &:hover {
-                        background-color: #000;
+        .introduce__box {
+            display: flex;
+            justify-content: center;
+    
+            img {
+                width: 200px;
+                background-color: #fae29e;
+                border-radius: 50%;
+            }
+    
+            .introduce__desc {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-left: 30px;
+                ul {
+                    li {
+                        margin-bottom: 25px;
+                        p {
+                            color: #0077ff;
+                            font-weight: bold;
+                            font-size: 23px;
+                            font-family: 'NanumSquareNeo';
+                        }
+                        span {
+                            font-size: 18px;
+                            font-family: 'NanumSquareNeo';
+                        }
                     }
                 }
             }
         }
     }
+}
+
+// introSkill
+.introSkill {
+    padding: 10%;
+}
+
+// me__kind
+.me__kind {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1280px;
+    margin: 0 auto;
+    padding: 10% 0;
+    box-sizing: border-box;
+
+    h1 {
+        font-size: 24px;
+        font-family: 'NanumBarunGothic';
+        font-weight: 700;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    ol.kind__ol {
+       
+        li {
+            span {
+                text-align: left;
+                font-size: 22px;
+                font-family: 'NexonLv2Gothic';
+                font-weight: 400;
+            }
+            &:nth-child(1):before {
+                content:"1.";
+                font-size: 22px;
+            }
+            &:nth-child(2):before {
+                content:"2.";
+                font-size: 22px;
+            }
+            &:nth-child(3):before {
+                content:"3.";
+                font-size: 22px;
+            }
+        }
+    }
+}
